@@ -1,5 +1,6 @@
-# React digital garden
+# react-digital-garden
+My digital garden site, based on @React
 
-## tech stack
+## Tech Stack
 
 * pnpm
