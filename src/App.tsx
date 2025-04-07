@@ -1,26 +1,19 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import About from './components/About';
-import Home from './components/Home';
+import {  Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home'
+import Post from './pages/Post';
+import About from './pages/About';
 
-        function App() {
-          return (
-            <div className="App">
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">About</Link>
-                  </li>
-                </ul>
-              </nav>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-              </Routes>
-            </div>
-          );
-        }
+function App() {
+  return (
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />           {/* 首页 */}
+          <Route path="posts/:id" element={<Post />} /> {/* 文章详情页 */}
+          <Route path="about" element={<About />} />   {/* 关于页 */}
+        </Route>
+      </Routes>
+  );
+}
 
-        export default App;
+export default App;
