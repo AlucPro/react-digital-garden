@@ -5,7 +5,7 @@ import Footer from '../Footer';
 
 const Layout: React.FC = () => {
   return (
-    <div>
+    <div className='max-width mx-auto px3'>
       <Header />
       <div className="main">
         <Sidebar />
