@@ -1,20 +1,20 @@
-import { Outlet } from 'react-router-dom';
 import Header from '../Header';
-import Sidebar from '../Sidebar';
 import Footer from '../Footer';
 
-const Layout: React.FC = () => {
+const Layout: React.FC = ({children}) => {
   return (
-    <div className='max-width mx-auto px3'>
-      <Header />
-      <div className="main">
-        <Sidebar />
-        <div className="content">
-          <Outlet /> {/* 渲染具体页面内容 */}
+     <div className='layout'>
+        <div className='layout-content'>
+        <div className='header'>
+            <Header />
         </div>
-      </div>
-      <Footer />
+        <div className="body">
+            {children}
+        </div>
+        <Footer />
+        </div>
     </div>
+    
   );
 };
 
