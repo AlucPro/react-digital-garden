@@ -1,88 +1,29 @@
 {
   "name": "react-digital-garden",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "cra-template-redux-typescript": "2.0.0",
-    "dotenv": "^16.4.7",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-redux": "^9.2.0",
-    "react-scripts": "5.0.1"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack serve -c build/webpack.dev.ts",
-    "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack serve -c build/webpack.dev.ts",
-    "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack serve -c build/webpack.dev.ts",
-    "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack serve -c build/webpack.dev.ts",
-    "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c build/webpack.prod.ts",
-    "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c build/webpack.prod.ts",
-    "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c build/webpack.prod.ts",
-    "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.prod.ts",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,stylus,html,md}\"",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src --max-warnings=0",
-    "pre-check": "tsc && npx lint-staged"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "pnpm run lint:eslint",
-      "pnpm run lint:prettier"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.27.0",
-    "@eslint/js": "^9.24.0",
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "@typescript-eslint/eslint-plugin": "^8.29.0",
-    "@typescript-eslint/parser": "^8.29.0",
-    "babel-loader": "^10.0.0",
-    "copy-webpack-plugin": "^13.0.0",
-    "core-js": "^3.41.0",
-    "cross-env": "^7.0.3",
-    "css-loader": "^7.1.2",
-    "eslint": "^9.24.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-friendly-formatter": "^4.0.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "globals": "^16.0.0",
-    "html-webpack-plugin": "^5.6.3",
-    "prettier": "^3.5.3",
-    "style-loader": "^4.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.29.0",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1",
-    "webpack-merge": "^6.0.1"
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
   }
 }
