@@ -1,9 +1,9 @@
-const Home: React.FC = () => {
-    return (
-      <div>
-   Home 
-      </div>
-    );
-  };
-  
-  export default Home;
+const About: React.FC = () => {
+  return (
+    <div>
+ About 
+    </div>
+  );
+};
+
+export default About;

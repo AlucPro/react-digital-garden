@@ -1,7 +1,8 @@
 import Header from '../Header';
 import Footer from '../Footer';
+import { Outlet } from 'react-router-dom';
 
-const Layout: React.FC = ({children}) => {
+const Layout: React.FC = () => {
   return (
      <div className='layout'>
         <div className='layout-content'>
@@ -9,7 +10,7 @@ const Layout: React.FC = ({children}) => {
             <Header />
         </div>
         <div className="body">
-            {children}
+            <Outlet />
         </div>
         <Footer />
         </div>
